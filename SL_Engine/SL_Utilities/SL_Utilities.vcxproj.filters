@@ -12,6 +12,9 @@
     <Filter Include="Header Files\String">
       <UniqueIdentifier>{99d812bf-7686-4d8d-b792-d27369eca056}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Soil">
+      <UniqueIdentifier>{a826a4bb-534a-44c6-a1f2-f1036bc50f67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Debug_Output.h">
@@ -38,6 +41,24 @@
     <ClInclude Include="String.h">
       <Filter>Header Files\String</Filter>
     </ClInclude>
+    <ClInclude Include="image_DXT.h">
+      <Filter>Soil</Filter>
+    </ClInclude>
+    <ClInclude Include="image_helper.h">
+      <Filter>Soil</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL.h">
+      <Filter>Soil</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image_aug.h">
+      <Filter>Soil</Filter>
+    </ClInclude>
+    <ClInclude Include="stbi_DDS_aug.h">
+      <Filter>Soil</Filter>
+    </ClInclude>
+    <ClInclude Include="stbi_DDS_aug_c.h">
+      <Filter>Soil</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SkylineBinPack.cpp">
@@ -48,6 +69,24 @@
     </ClCompile>
     <ClCompile Include="GuillotineBinPack.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="image_helper.c">
+      <Filter>Soil</Filter>
+    </ClCompile>
+    <ClCompile Include="SOIL.c">
+      <Filter>Soil</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image_aug.c">
+      <Filter>Soil</Filter>
+    </ClCompile>
+    <ClCompile Include="original\stb_image-1.09.c">
+      <Filter>Soil</Filter>
+    </ClCompile>
+    <ClCompile Include="original\stb_image-1.16.c">
+      <Filter>Soil</Filter>
+    </ClCompile>
+    <ClCompile Include="image_DXT.c">
+      <Filter>Soil</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

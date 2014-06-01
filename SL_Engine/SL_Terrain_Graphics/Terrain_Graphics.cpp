@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Terrain_Graphics.h"
 #include "..\SL_Graphics\Resources.h"
-#include "..\SL_Graphics\Shapes.h"
+#include "..\SL_Graphics_Model\Shapes.h"
 #include "..\SL_Graphics\Shader.h"
 #include "..\SL_Utilities\Imaging.h"
 #include "..\SL_Utilities\Debug_Output.h"

@@ -148,27 +148,29 @@
   <ItemGroup>
     <ClInclude Include="Debug_Output.h" />
     <ClInclude Include="GuillotineBinPack.h" />
+    <ClInclude Include="image_DXT.h" />
+    <ClInclude Include="image_helper.h" />
     <ClInclude Include="Imaging.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="SkylineBinPack.h" />
+    <ClInclude Include="SOIL.h" />
+    <ClInclude Include="stbi_DDS_aug.h" />
+    <ClInclude Include="stbi_DDS_aug_c.h" />
+    <ClInclude Include="stb_image_aug.h" />
     <ClInclude Include="String.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SOIL\SOIL.vcxproj">
-      <Project>{c32fb2b4-500c-43cd-a099-eecce079d3f1}</Project>
-      <Private>false</Private>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="GuillotineBinPack.cpp" />
+    <ClCompile Include="image_DXT.c" />
+    <ClCompile Include="image_helper.c" />
+    <ClCompile Include="original\stb_image-1.09.c" />
+    <ClCompile Include="original\stb_image-1.16.c" />
     <ClCompile Include="Rect.cpp" />
     <ClCompile Include="SkylineBinPack.cpp" />
+    <ClCompile Include="SOIL.c" />
+    <ClCompile Include="stb_image_aug.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

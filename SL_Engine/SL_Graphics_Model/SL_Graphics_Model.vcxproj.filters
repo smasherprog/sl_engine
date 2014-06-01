@@ -26,6 +26,9 @@
     <ClInclude Include="Vertex_Attribute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Shapes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Vertex_Buffer_Factory.cpp">

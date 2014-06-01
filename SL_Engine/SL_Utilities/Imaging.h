@@ -1,6 +1,6 @@
 #ifndef IMAGING_H_123
 #define IMAGING_H_123
-#include "..\SOIL\SOIL.h"
+#include "..\SL_Utilities\SOIL.h"
 #include <vector>
 #include "Utils.h"
 

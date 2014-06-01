@@ -23,9 +23,6 @@
     <ClInclude Include="Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Shapes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Shader_Factory.h">
       <Filter>Header Files</Filter>
     </ClInclude>

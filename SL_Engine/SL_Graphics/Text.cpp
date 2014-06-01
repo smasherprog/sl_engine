@@ -54,7 +54,7 @@ SL_Graphics::Text::Text(){
 	_Shader.AddShader_FromFile(GL_VERTEX_SHADER, "../../shaders/distance-field-2.vert");
 	_Shader.AddShader_FromFile(GL_FRAGMENT_SHADER, "../../shaders/distance-field-2.frag");
 	_Shader.Finalize();	
-	Set_Font_Size(72);
+	Set_Font_Size(14);
 	Set_Text("A Quick Brown Fox Jumps Over The Lazy Dog 0123456789");
 	_Pos = glm::zero<glm::vec2>();
 }

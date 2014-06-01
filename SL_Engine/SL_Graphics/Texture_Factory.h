@@ -4,8 +4,7 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "..\SOIL\SOIL.h"
-#include "..\glm\glm.hpp"
+#include "..\SL_Utilities\SOIL.h"
 
 namespace SL_Graphics{
 	class Texture;
