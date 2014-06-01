@@ -130,18 +130,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Shapes.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Vector_T.h" />
-    <ClInclude Include="Vertex_Attribute.h" />
-    <ClInclude Include="Vertex_Buffer.h" />
-    <ClInclude Include="Vertex_Buffer_Factory.h" />
+    <ClInclude Include="IVertex_Attribute.h" />
+    <ClInclude Include="IVertex_Buffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Vertex_Attribute.cpp" />
-    <ClCompile Include="Vertex_Buffer.cpp" />
-    <ClCompile Include="Vertex_Buffer_Factory.cpp" />
+    <ClCompile Include="IVertex_Attribute.cpp" />
+    <ClCompile Include="IVertex_Buffer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

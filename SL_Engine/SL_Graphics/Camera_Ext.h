@@ -1,7 +1,7 @@
 #ifndef CAMERA_EXT_H_123
 #define CAMERA_EXT_H_123
 #include "..\glfw\include\GLFW\glfw3.h"
-#include "Camera.h"
+#include "..\SL_Graphics_Model\Camera.h"
 
 #define PRESSED(x)(x == GLFW_PRESS || x == GLFW_REPEAT)
 

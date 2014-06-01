@@ -3,7 +3,7 @@
 #include <string>
 #include "..\SL_Font_Utilities\Font.h"
 #include "Shader.h"
-#include "..\SL_Graphics_Model\Vertex_Buffer.h"
+#include "..\SL_Graphics_Model\IVertex_Buffer.h"
 #include "..\glm\glm.hpp"
 #include "..\glm\ext.hpp"
 
@@ -13,7 +13,7 @@ namespace SL_Graphics{
 	class Text{
 	protected:
 		SL_Graphics::Shader _Shader;
-		SL_Graphics::Model::Vertex_Buffer buffer;
+		std::shared_ptr<SL_Graphics::Model::IVertex_Buffer> buffer;
 		SL_Font::Font_Wrapper _Font;
 		std::string _Text;
 		float _Font_Size;

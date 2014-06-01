@@ -7,7 +7,7 @@
 #include "..\SL_Utilities\Debug_Output.h"
 #include "..\glm\glm.hpp"
 #include"..\glm\ext.hpp"
-#include "..\SL_Graphics\Camera.h"
+#include "..\SL_Graphics_Model\Camera.h"
 
 SL_Terrain::Terrain_Graphics::~Terrain_Graphics(){
 	glDeleteVertexArrays(1, &_VAO);

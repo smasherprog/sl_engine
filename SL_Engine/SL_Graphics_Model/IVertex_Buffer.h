@@ -1,12 +1,12 @@
-#ifndef SL_VERTEX_BUFFER_H
-#define SL_VERTEX_BUFFER_H
+#ifndef SL_IVERTEX_BUFFER_H
+#define SL_IVERTEX_BUFFER_H
 #include <string>
 #include <vector>
 #include "Vector_T.h"
-#include "Vertex_Attribute.h"
-#include <memory>
+#include "IVertex_Attribute.h"
 #include "..\glew\include\GL\glew.h"
 #include "..\glfw\include\GLFW\glfw3.h"
+#include <memory>
 
 namespace SL_Graphics{
 	namespace Model{
@@ -46,22 +46,25 @@ namespace SL_Graphics{
 			};
 		} ivec4;
 
-		class Vertex_Buffer{
+		class IVertex_Buffer{
 		public:
 
-			Vertex_Buffer() { clear(); }
-			void clear();
+			IVertex_Buffer() { IVertex_Buffer::clear(); }
+			virtual ~IVertex_Buffer() { clear(); }
+			
 			void push_back_vertices(const void* verts, const size_t count){ state = DIRTY; vertices.push_back(verts, count); }
 			void push_back_indices(GLuint* ind, const size_t count){ state = DIRTY; auto b = vertices.size(); for (size_t i = 0; i < count; i++) ind[i] += b; indices.push_back(ind, count); }
 			void insert_vertices(const size_t index, const void* verts, const size_t count);
 			void insert_indices(const size_t index, const void* ind, const size_t count);
 			size_t insert(const size_t index, const void * vertices, const size_t vcount, const GLuint * indices, const size_t icount);
 			size_t push_back(const void * vertices, const size_t vcount, const GLuint * indices, const size_t icount){ return insert(items.size(), vertices, vcount, indices, icount); }
+			
+			virtual void clear();
+			virtual void upload() = 0;
+			virtual void draw_begin(GLenum m) = 0;
+			virtual void draw_end() = 0;
+			virtual void draw(size_t index, GLenum m) = 0;
 
-			void upload();
-			void draw_begin(GLenum m);
-			void draw_end();
-			void draw(size_t index, GLenum m);
 			size_t batch_count() const { return items.size(); }
 
 			enum Status { CLEAN, DIRTY, FROZEN };
@@ -96,7 +99,7 @@ namespace SL_Graphics{
 			Status state = CLEAN;
 
 			/** Array of attributes. */
-			Vector_Attribute attributes[MAX_VERTEX_ATTRIBUTE];
+			std::shared_ptr<IVertex_Attribute> attributes[MAX_VERTEX_ATTRIBUTE];
 
 		};
 	};

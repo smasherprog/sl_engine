@@ -173,7 +173,6 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
     <ClInclude Include="Camera_Ext.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Shader.h" />
@@ -181,6 +180,9 @@
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Texture_Factory.h" />
+    <ClInclude Include="Vertex_Attribute.h" />
+    <ClInclude Include="Vertex_Buffer.h" />
+    <ClInclude Include="Vertex_Buffer_Factory.h" />
     <ClInclude Include="Window_Base.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
@@ -189,6 +191,9 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Shader_Factory.cpp" />
     <ClCompile Include="Texture_Factory.cpp" />
+    <ClCompile Include="Vertex_Attribute.cpp" />
+    <ClCompile Include="Vertex_Buffer.cpp" />
+    <ClCompile Include="Vertex_Buffer_Factory.cpp" />
     <ClCompile Include="Window_Base.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

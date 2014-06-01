@@ -3,7 +3,7 @@
 #include "..\SL_Utilities\Debug_Output.h"
 #include "Texture_Factory.h"
 #include "..\SL_Terrain_Graphics\Terrain_Graphics.h"
-#include "Camera.h"
+#include "..\SL_Graphics_Model\Camera.h"
 #include "Camera_Ext.h"
 #include "..\SL_Utilities\Imaging.h"
 #include "..\SL_Font_Utilities\Font_Factory.h"

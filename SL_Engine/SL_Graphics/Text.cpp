@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Text.h"
 #include "..\SL_Font_Utilities\Font_Factory.h"
-#include "..\SL_Graphics_Model\Vertex_Buffer_Factory.h"
+#include "Vertex_Buffer_Factory.h"
 #include "..\glm\glm.hpp"
 #include "..\glm\ext.hpp"
 #include "..\SL_Utilities\Debug_Output.h"
@@ -14,7 +14,7 @@ typedef struct {
 } vertex_t;
 #define DEFAULT_FONT_BUILD_SIZE 48.0f
 
-void add_text(SL_Graphics::Model::Vertex_Buffer& buffer, SL_Font::Font_Wrapper& font,
+void add_text(SL_Graphics::Model::IVertex_Buffer* buffer, SL_Font::Font_Wrapper& font,
 const char * text, glm::vec4 * color, glm::vec2 * pen)
 {
 	size_t i;
@@ -41,7 +41,7 @@ const char * text, glm::vec4 * color, glm::vec2 * pen)
 		{ x0, y1, 0, s0, t1, r, g, b, a },
 		{ x1, y1, 0, s1, t1, r, g, b, a },
 		{ x1, y0, 0, s1, t0, r, g, b, a } };
-		buffer.push_back(vertices, 4, indices, 6);
+		buffer->push_back(vertices, 4, indices, 6);
 		pen->x += glyph.advance_x;
 	}
 }
@@ -66,7 +66,7 @@ void SL_Graphics::Text::Set_Text(std::string text, float red, float green, float
 	_Text = text;
 	glm::vec2 pen = glm::zero<glm::vec2>();
 	glm::vec4 black(red, green, blue, alpha);
-	add_text(buffer, _Font, _Text.c_str(), &black, &pen);
+	add_text(buffer.get(), _Font, _Text.c_str(), &black, &pen);
 }
 
 
@@ -100,5 +100,5 @@ void SL_Graphics::Text::Draw(){
 		1, 0, glm::value_ptr(view));
 	glUniformMatrix4fv(_Shader.GetUniformLocation("projection"),
 		1, 0, glm::value_ptr(projection));
-	buffer.draw(-1, GL_TRIANGLES);
+	buffer->draw(-1, GL_TRIANGLES);
 }

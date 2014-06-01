@@ -111,9 +111,9 @@ namespace SL_Font{
 		unsigned int Texture_ID = 0;
 	};
 	class Font_Wrapper{
-		std::shared_ptr<Font> _Font;
 	public:
 		Font_Wrapper() {}
+		std::shared_ptr<Font> _Font;
 		Font_Wrapper(std::shared_ptr<SL_Font::Font>& f) : _Font(f){}
 		const SL_Font::Font* Get_Font() const { return _Font.get(); }
 	};
