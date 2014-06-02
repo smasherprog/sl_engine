@@ -1,8 +1,10 @@
 #ifndef SL_RESOURCES_H_123
 #define SL_RESOURCES_H_123
+#include <string>
+
 namespace SL_Resources{
-	auto Shader_Location = "C:\\Users\\scott\\Documents\\GitHub\\sl_engine\\SL_Engine\\Build\\Shaders\\";
-	auto Texture_Location = "C:\\Users\\scott\\Documents\\GitHub\\sl_engine\\SL_Engine\\Build\\Textures\\";
+	const std::string Shader_Location = "../../../Resources/Shaders/";
+	const std::string Texture_Location = "../../../Resources/Textures/";
 };
 
 #endif

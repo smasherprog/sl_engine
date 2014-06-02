@@ -1,7 +1,7 @@
 #ifndef SHADER_H_123
 #define SHADER_H_123
 #include <vector>
-
+#include <string>
 
 namespace SL_Graphics{
 	class Shader{
@@ -12,7 +12,9 @@ namespace SL_Graphics{
 		virtual ~Shader();
 		void Enable();
 
+		bool AddShader_FromText(unsigned int ShaderType, const std::string f){ return AddShader_FromText(ShaderType, f.c_str()); }
 		bool AddShader_FromText(unsigned int ShaderType, const char* f);
+		bool AddShader_FromFile(unsigned int ShaderType, const std::string f){ return AddShader_FromFile(ShaderType, f.c_str()); }
 		bool AddShader_FromFile(unsigned int ShaderType, const char* f);
 		bool Finalize();
 		int GetUniformLocation(const char* pUniformName);

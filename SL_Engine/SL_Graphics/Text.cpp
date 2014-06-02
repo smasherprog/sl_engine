@@ -6,6 +6,7 @@
 #include "..\glm\ext.hpp"
 #include "..\SL_Utilities\Debug_Output.h"
 #include <string.h>
+#include "Resources.h"
 
 typedef struct {
 	float x, y, z;    // position
@@ -50,9 +51,9 @@ SL_Graphics::Text::Text(){
 
 	_Font = SL_Font::Create_Font("Times New Roman", DEFAULT_FONT_BUILD_SIZE);
 	buffer = Vertex_Buffer_Factory::Create("vertex:3f,tex_coord:2f,color:4f");
-
-	_Shader.AddShader_FromFile(GL_VERTEX_SHADER, "../../shaders/distance-field-2.vert");
-	_Shader.AddShader_FromFile(GL_FRAGMENT_SHADER, "../../shaders/distance-field-2.frag");
+	
+	_Shader.AddShader_FromFile(GL_VERTEX_SHADER, SL_Resources::Shader_Location + std::string("distance-field-2.vert"));
+	_Shader.AddShader_FromFile(GL_FRAGMENT_SHADER, SL_Resources::Shader_Location + std::string( "distance-field-2.frag"));
 	_Shader.Finalize();	
 	Set_Font_Size(14);
 	Set_Text("A Quick Brown Fox Jumps Over The Lazy Dog 0123456789");

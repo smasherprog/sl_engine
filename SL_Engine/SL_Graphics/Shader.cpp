@@ -11,6 +11,7 @@ SL_Graphics::Shader::~Shader(){
 	for (auto x : _ShaderObjList) glDeleteShader(x);
 	if (_Program != 0) glDeleteProgram(_Program);
 }
+
 bool SL_Graphics::Shader::AddShader_FromFile(unsigned int ShaderType, const char* f){
 	std::ifstream file(f);
 	if (file){
