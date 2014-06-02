@@ -21,6 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{68598827-9EF3-4D00-A0D6-EBDFC3CDE9E1}</ProjectGuid>
     <RootNamespace>SL_Graphics</RootNamespace>
+    <ProjectName>SL_Graphics</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

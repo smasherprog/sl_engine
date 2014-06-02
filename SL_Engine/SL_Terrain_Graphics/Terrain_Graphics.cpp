@@ -42,9 +42,9 @@ SL_Terrain::Terrain_Graphics::Terrain_Graphics(){
 
 	_Shader = std::make_unique<SL_Graphics::Shader>();
 	std::string vert = SL_Resources::Shader_Location;
-	vert += "Terrain_VS.glsl";
+	vert += "Terrain.vert";
 	std::string frag = SL_Resources::Shader_Location;
-	vert += "Terrain_PS.glsl";
+	frag += "Terrain.frag";
 	_Shader->AddShader_FromFile(GL_VERTEX_SHADER, vert.c_str());
 	_Shader->AddShader_FromFile(GL_FRAGMENT_SHADER, frag.c_str());
 	_Shader->Finalize();

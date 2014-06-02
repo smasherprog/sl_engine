@@ -198,16 +198,8 @@
     <ClCompile Include="Terrain_Graphics.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Shaders\Terrain_PS.glsl">
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
-      <FileType>Document</FileType>
-    </None>
-    <None Include="..\Shaders\Terrain_VS.glsl">
-      <FileType>Document</FileType>
-    </None>
+    <None Include="..\Build\Shaders\Terrain.frag" />
+    <None Include="..\Build\Shaders\Terrain.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
