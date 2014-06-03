@@ -32,6 +32,9 @@
     <ClInclude Include="Graphics_Debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ITexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

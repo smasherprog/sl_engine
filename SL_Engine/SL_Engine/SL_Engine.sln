@@ -34,6 +34,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SL_Font_Utilities", "..\SL_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SL_Graphics_Model", "..\SL_Graphics_Model\SL_Graphics_Model.vcxproj", "{70FDCD93-07E3-432D-8247-369AE02B527A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SL_Terrain_Model", "..\SL_Terrain_Model\SL_Terrain_Model.vcxproj", "{269EBA0E-04D0-45F9-B791-19064B16D209}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		debug|Win32 = debug|Win32
@@ -130,6 +132,12 @@ Global
 		{70FDCD93-07E3-432D-8247-369AE02B527A}.release|Win32.Build.0 = Release|Win32
 		{70FDCD93-07E3-432D-8247-369AE02B527A}.release|x64.ActiveCfg = Release|x64
 		{70FDCD93-07E3-432D-8247-369AE02B527A}.release|x64.Build.0 = Release|x64
+		{269EBA0E-04D0-45F9-B791-19064B16D209}.debug|Win32.ActiveCfg = Debug|Win32
+		{269EBA0E-04D0-45F9-B791-19064B16D209}.debug|Win32.Build.0 = Debug|Win32
+		{269EBA0E-04D0-45F9-B791-19064B16D209}.debug|x64.ActiveCfg = Debug|Win32
+		{269EBA0E-04D0-45F9-B791-19064B16D209}.release|Win32.ActiveCfg = Release|Win32
+		{269EBA0E-04D0-45F9-B791-19064B16D209}.release|Win32.Build.0 = Release|Win32
+		{269EBA0E-04D0-45F9-B791-19064B16D209}.release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

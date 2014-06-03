@@ -7,6 +7,9 @@ namespace SL_Graphics{
 	class Shader{
 		unsigned int _Program;
 		std::vector<unsigned int> _ShaderObjList;
+		std::vector<unsigned int> _Active_Texture_Units;
+		void _Parse(std::vector<char> file);
+
 	public:
 		Shader();
 		virtual ~Shader();

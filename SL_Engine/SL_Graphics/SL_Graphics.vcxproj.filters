@@ -20,9 +20,6 @@
     <ClInclude Include="Texture_Factory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Shader_Factory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -76,5 +73,9 @@
     <ClCompile Include="Vertex_Attribute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\Shaders\distance-field-2.frag" />
+    <None Include="..\Resources\Shaders\distance-field-2.vert" />
   </ItemGroup>
 </Project>

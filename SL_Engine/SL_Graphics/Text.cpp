@@ -81,7 +81,7 @@ void SL_Graphics::Text::Draw(){
 
 	view = glm::mat4();
 	_Shader.Enable();
-	glActiveTexture(GL_TEXTURE0);
+	
 	glBindTexture(GL_TEXTURE_2D, _Font.Get_Font()->Texture_ID);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

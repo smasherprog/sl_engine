@@ -179,7 +179,6 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Shader_Factory.h" />
     <ClInclude Include="Text.h" />
-    <ClInclude Include="Texture.h" />
     <ClInclude Include="Texture_Factory.h" />
     <ClInclude Include="Vertex_Attribute.h" />
     <ClInclude Include="Vertex_Buffer.h" />
@@ -224,6 +223,10 @@
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\Shaders\distance-field-2.frag" />
+    <None Include="..\Resources\Shaders\distance-field-2.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

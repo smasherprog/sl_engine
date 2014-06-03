@@ -90,7 +90,6 @@ SL_Graphics::Window_Base::Window_Base(const char* window_title, int top_pos, int
 			GLenum err = glewInit();
 			if (GLEW_OK != err) DEBUG_MSG("Error Calling glewInit() %", std::string((char*)glewGetErrorString(err)));
 			
-			Texture_Factory::Init();
 			_Camera = std::make_unique<Camera>();
 			_Camera->Set_Position(glm::vec3(0, 100, 250));
 			_Camera->Set_Look(glm::vec3(0, 0, -100.0f));
@@ -115,7 +114,6 @@ SL_Graphics::Window_Base::Window_Base(const char* window_title, int top_pos, int
 }
 
 SL_Graphics::Window_Base::~Window_Base(){
-	Texture_Factory::DeInit();
 	glfwTerminate();
 }
 bool SL_Graphics::Window_Base::Begin(){

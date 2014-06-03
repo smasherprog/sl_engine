@@ -1,8 +1,9 @@
 #include "stdafx.h"
 #include "Shader.h"
-#include "..\SL_Utilities\Debug_Output.h"
+#include "..\SL_Graphics_Model\Graphics_Debug.h"
 #include <fstream>
 #include <vector>
+#include "..\SL_Utilities\String.h"
 
 SL_Graphics::Shader::Shader(){
 
@@ -25,6 +26,7 @@ bool SL_Graphics::Shader::AddShader_FromFile(unsigned int ShaderType, const char
 		file.read(&text[0], length);
 		text[length] = 0;//make sure it is null terminated
 		auto b = AddShader_FromText(ShaderType, &text[0]);
+		if(b) _Parse(text);
 		return b;
 	}
 	return false;
@@ -42,9 +44,7 @@ bool SL_Graphics::Shader::AddShader_FromText(unsigned int ShaderType, const char
 	GLint lengths[] = { 0 };
 
 	glShaderSource(ShaderObj, 1, files, lengths);
-
 	glCompileShader(ShaderObj);
-
 	GLint success;
 	glGetShaderiv(ShaderObj, GL_COMPILE_STATUS, &success);
 
@@ -54,9 +54,8 @@ bool SL_Graphics::Shader::AddShader_FromText(unsigned int ShaderType, const char
 		DEBUG_MSG("Error compiling %\n%", ShaderType, InfoLog);
 		return false;
 	}
-
 	glAttachShader(_Program, ShaderObj);
-
+	
 	return true;
 }
 bool SL_Graphics::Shader::Finalize(){
@@ -80,8 +79,7 @@ bool SL_Graphics::Shader::Finalize(){
 		glGetProgramInfoLog(_Program, sizeof(ErrorLog), NULL, ErrorLog);
 		DEBUG_MSG("Invalid shader program: %", ErrorLog);
 		return false;
-	}
-
+	}	
 	// Delete the intermediate shader objects that have been added to the program
 	for (auto it = _ShaderObjList.begin(); it != _ShaderObjList.end(); it++) glDeleteShader(*it);
 	_ShaderObjList.clear();
@@ -95,8 +93,21 @@ int SL_Graphics::Shader::GetUniformLocation(const char* pUniformName){
 int SL_Graphics::Shader::GetProgramParam(int param){
 	GLint ret;
 	glGetProgramiv(_Program, param, &ret);
-	return ret;
+	return ret; 
 }
 void SL_Graphics::Shader::Enable(){
 	glUseProgram(_Program);
+	glActiveTexture(GL_TEXTURE0);
+}
+//simple parser right now. Basic checks. 
+void SL_Graphics::Shader::_Parse(std::vector<char> file){
+	int incommentblock = 0;
+	for (const auto& line : split(std::string(&file[0], file.size()), '\n')){
+		auto temp = trim(line);
+		if (starts_with(temp, "/*")){ incommentblock += 1; continue; }//entered comment block
+		else if (ends_with(temp, "*/")) {incommentblock -= 1; continue;}//finnaly, the comment block has decreased by one
+		else if (incommentblock>0) continue;//still inside of a comment block.. keep going
+		else if (starts_with(temp, "//"))continue; //single line comment..
+		std::cout << line << std::endl;
+	}
 }

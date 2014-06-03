@@ -134,6 +134,7 @@
     <ClInclude Include="Graphics_Debug.h" />
     <ClInclude Include="Shapes.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="ITexture.h" />
     <ClInclude Include="Vector_T.h" />
     <ClInclude Include="IVertex_Attribute.h" />
     <ClInclude Include="IVertex_Buffer.h" />

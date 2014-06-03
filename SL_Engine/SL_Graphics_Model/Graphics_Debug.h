@@ -11,7 +11,8 @@ inline int CheckGLError(char *file, int line)
 	GLenum glErr=  glGetError();
 	while (glErr != GL_NO_ERROR)
 	{
-		char* str1 = (char*)gluErrorString(glErr);
+		
+		char* str1 = (char*)glewGetErrorString(glErr);
 		if (str1) DEBUG_MSG("GL Error #%(%) in File at line: %", glErr, str1, file, line);
 		else DEBUG_MSG("GL Error #% in File at line: %", glErr, file, line);
 		glErr = glGetError();

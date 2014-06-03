@@ -30,7 +30,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Build\Shaders\Terrain.frag" />
-    <None Include="..\Build\Shaders\Terrain.vert" />
+    <None Include="..\Resources\Shaders\Terrain.frag" />
+    <None Include="..\Resources\Shaders\Terrain.vert" />
   </ItemGroup>
 </Project>
