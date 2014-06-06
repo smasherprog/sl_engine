@@ -31,7 +31,6 @@
  * policies, either expressed or implied, of Nicolas P. Rougier.
  * ========================================================================= */
 
-uniform sampler2D texture;
 uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;

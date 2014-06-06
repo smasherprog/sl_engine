@@ -22,7 +22,14 @@ inline std::string trim(const std::string& str)
 }
 inline bool starts_with(const std::string& string_to_search, const std::string& search_term )
 {
-	return string_to_search.find_first_of(search_term) == 0;
+	return string_to_search.compare(0, search_term.size(), search_term) == 0;
+}
+inline bool is_empty_or_whitespace(const std::string& string_to_search)
+{
+	auto b= string_to_search.size() == 0;
+	if (b)return b;
+	for (const auto& x : string_to_search) if (x != ' ') return false;
+	return true;
 }
 inline bool ends_with(std::string const& string_to_search, std::string const& search_term) {
 	return search_term.size() <= string_to_search.size() && string_to_search.find(search_term, string_to_search.size() - search_term.size()) != string_to_search.npos;

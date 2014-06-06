@@ -7,8 +7,9 @@ namespace SL_Graphics{
 	class Shader{
 		unsigned int _Program;
 		std::vector<unsigned int> _ShaderObjList;
-		std::vector<unsigned int> _Active_Texture_Units;
+		std::vector<std::string> _Active_Texture_Units;
 		void _Parse(std::vector<char> file);
+		bool _Parse_For_Texture(const std::string& line);
 
 	public:
 		Shader();
