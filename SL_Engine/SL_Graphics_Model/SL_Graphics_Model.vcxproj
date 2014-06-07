@@ -130,8 +130,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BaseShader.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Graphics_Debug.h" />
+    <ClInclude Include="Shader_Parser.h" />
     <ClInclude Include="Shapes.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="ITexture.h" />
@@ -140,6 +142,8 @@
     <ClInclude Include="IVertex_Buffer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseShader.cpp" />
+    <ClCompile Include="Shader_Parser.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="IVertex_Attribute.cpp" />
     <ClCompile Include="IVertex_Buffer.cpp" />

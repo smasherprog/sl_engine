@@ -59,6 +59,9 @@
     <ClInclude Include="stbi_DDS_aug_c.h">
       <Filter>Soil</Filter>
     </ClInclude>
+    <ClInclude Include="IParse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SkylineBinPack.cpp">
@@ -87,6 +90,9 @@
     </ClCompile>
     <ClCompile Include="image_DXT.c">
       <Filter>Soil</Filter>
+    </ClCompile>
+    <ClCompile Include="IParse.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

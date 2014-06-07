@@ -151,6 +151,7 @@
     <ClInclude Include="image_DXT.h" />
     <ClInclude Include="image_helper.h" />
     <ClInclude Include="Imaging.h" />
+    <ClInclude Include="IParse.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="SkylineBinPack.h" />
     <ClInclude Include="SOIL.h" />
@@ -165,6 +166,7 @@
     <ClCompile Include="GuillotineBinPack.cpp" />
     <ClCompile Include="image_DXT.c" />
     <ClCompile Include="image_helper.c" />
+    <ClCompile Include="IParse.cpp" />
     <ClCompile Include="original\stb_image-1.09.c" />
     <ClCompile Include="original\stb_image-1.16.c" />
     <ClCompile Include="Rect.cpp" />
